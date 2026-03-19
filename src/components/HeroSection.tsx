@@ -35,7 +35,7 @@ const item = {
 };
 
 const HeroSection = () => (
-  <section className="min-h-screen flex items-center py-24 md:py-32">
+  <section className="min-h-screen flex items-center py-12 md:py-16">
     <div className="section-container w-full">
       <motion.div
         initial={{ opacity: 0, y: 30 }}

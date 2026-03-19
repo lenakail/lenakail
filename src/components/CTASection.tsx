@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { Send, Linkedin, MessageCircle } from "lucide-react";
+import { Linkedin, MessageCircle } from "lucide-react";
 
 const CTASection = () => (
-  <section className="py-24 md:py-32">
+  <section className="py-12 md:py-16">
     <div className="section-container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -21,19 +21,10 @@ const CTASection = () => (
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="https://t.me/awesomelena"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-          >
-            <Send size={18} />
-            Contact Me
-          </a>
-          <a
             href="https://www.linkedin.com/in/lena-kail-b25251198/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-border text-foreground px-8 py-4 rounded-lg font-semibold hover:bg-secondary transition-colors"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
             <Linkedin size={18} />
             LinkedIn
@@ -42,7 +33,7 @@ const CTASection = () => (
             href="https://t.me/awesomelena"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-border text-foreground px-8 py-4 rounded-lg font-semibold hover:bg-secondary transition-colors"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
             <MessageCircle size={18} />
             Telegram
