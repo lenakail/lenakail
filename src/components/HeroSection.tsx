@@ -43,6 +43,9 @@ const HeroSection = () => (
         transition={{ duration: 0.7 }}
         className="max-w-4xl"
       >
+        <p className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+          Lena Kail
+        </p>
         <p className="mono-text text-primary text-sm mb-6 tracking-wider uppercase">
           Product Marketing Manager
         </p>
