@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import HowIThinkSection from "@/components/HowIThinkSection";
 import ProofSection from "@/components/ProofSection";
@@ -8,8 +7,7 @@ import WorkStyleSection from "@/components/WorkStyleSection";
 import CTASection from "@/components/CTASection";
 
 const Index = () => (
-  <main className="overflow-x-hidden pt-14">
-    <Header />
+  <main className="overflow-x-hidden">
     <HeroSection />
     <HowIThinkSection />
     <ProofSection />
