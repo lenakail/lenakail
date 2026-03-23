@@ -20,7 +20,7 @@ const features = [
   {
     icon: Target,
     title: "Go-to-Market & Positioning",
-    desc: "Turning product complexity into clear offers and messaging",
+    desc: "Turning product complexity into clear offers and messages",
   },
 ];
 
@@ -53,10 +53,10 @@ const HeroSection = () => (
             style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400 }}
           >
             I turn complex Web3 products into clear, compelling offers{" "}
-            <em style={{ color: '#2B5EA7', fontStyle: 'italic' }}>that people actually buy</em>
+            <em style={{ color: '#2B5EA7', fontStyle: 'italic' }}>that people genuinely want to buy</em>
           </h1>
           <p className="text-base max-w-lg mb-10 leading-relaxed" style={{ color: '#6b6357' }}>
-            Product Marketing Manager with 6+ years in Web3 & fintech. Bridging
+            Product Marketing Manager with 6+ years of experience in Web3 & fintech. Bridging
             product, engineering, and market — from positioning to GTM execution.
           </p>
           
