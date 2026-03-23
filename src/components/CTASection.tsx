@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Linkedin, Send } from "lucide-react";
 
 const CTASection = () => (
-  <section className="py-12 md:py-16">
+  <section className="py-8 md:py-10">
     <div className="section-container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
