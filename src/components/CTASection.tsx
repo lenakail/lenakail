@@ -13,7 +13,7 @@ const CTASection = () => (
         style={{ boxShadow: "0 0 60px -15px hsl(173 80% 50% / 0.15)" }}
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Let's Build Something <span className="gradient-text">Great</span>
+          Let's Build Something <span style={{ color: "#E8631A", fontStyle: "italic" }}>Great</span>
         </h2>
         <p className="text-muted-foreground mb-10 max-w-lg mx-auto leading-relaxed">
           If you're building complex products and need someone to turn them into
