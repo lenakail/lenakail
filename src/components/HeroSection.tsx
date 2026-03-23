@@ -37,42 +37,59 @@ const item = {
 const HeroSection = () => (
   <section className="min-h-screen flex items-center py-12 md:py-16">
     <div className="section-container w-full">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        className="max-w-4xl"
-      >
-        <p className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-          Lena Kail
-        </p>
-        <p className="mono-text text-primary text-sm mb-6 tracking-wider uppercase">
-          Product Marketing Manager
-        </p>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.05] mb-6">
-          I turn complex Web3 products into clear, compelling offers{" "}
-          <span className="gradient-text">that people actually buy</span>
-        </h1>
-        <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
-          Product Marketing Manager with 6+ years in Web3 & fintech. Bridging
-          product, engineering, and market — from positioning to GTM execution.
-        </p>
-        <a
-          href="https://t.me/awesomelena"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-base hover:opacity-90 transition-opacity"
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
         >
-          <Send size={18} />
-          Get in Touch
-        </a>
-      </motion.div>
+          <p className="text-base font-medium text-foreground mb-1">Lena Kail</p>
+          <p className="mono-text text-xs mb-8 tracking-widest uppercase" style={{ color: '#7a7060' }}>
+            Product Marketing Manager
+          </p>
+          <h1
+            className="text-4xl md:text-5xl leading-tight mb-5"
+            style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400 }}
+          >
+            I turn complex Web3 products into clear, compelling offers{" "}
+            <em style={{ color: '#2B5EA7', fontStyle: 'italic' }}>that people actually buy</em>
+          </h1>
+          <p className="text-base max-w-lg mb-10 leading-relaxed" style={{ color: '#6b6357' }}>
+            Product Marketing Manager with 6+ years in Web3 & fintech. Bridging
+            product, engineering, and market — from positioning to GTM execution.
+          </p>
+          
+            href="https://t.me/awesomelena"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-7 py-3 rounded font-medium text-sm text-white transition-opacity hover:opacity-90"
+            style={{ backgroundColor: '#E8631A' }}
+          >
+            <Send size={16} />
+            Get in Touch
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="flex justify-center lg:justify-end"
+        >
+          <img
+            src="/hero-illustration.png"
+            alt="Lena Kail illustration"
+            className="w-full max-w-sm"
+          />
+        </motion.div>
+      </div>
 
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-20"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16"
       >
         {features.map((f) => (
           <motion.div
@@ -80,12 +97,15 @@ const HeroSection = () => (
             variants={item}
             className="card-glass hover-lift p-6"
           >
-            <f.icon className="text-primary mb-4" size={24} />
-            <h3 className="font-semibold text-foreground mb-2 text-sm">{f.title}</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">{f.desc}</p>
+            <f.icon size={20} className="mb-4" style={{ color: '#2B5EA7' }} />
+            <h3 className="font-medium text-sm mb-2" style={{ color: '#1a1a1a', fontFamily: 'Inter, sans-serif' }}>
+              {f.title}
+            </h3>
+            <p className="text-sm leading-relaxed" style={{ color: '#7a7060' }}>{f.desc}</p>
           </motion.div>
         ))}
       </motion.div>
+
     </div>
   </section>
 );
