@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Linkedin, MessageCircle } from "lucide-react";
+import { Linkedin, Send } from "lucide-react";
 
 const CTASection = () => (
   <section className="py-12 md:py-16">
@@ -35,7 +35,7 @@ const CTASection = () => (
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
-            <MessageCircle size={18} />
+            <Send size={18} />
             Telegram
           </a>
         </div>
