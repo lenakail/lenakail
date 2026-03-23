@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 const steps = [
   {
     num: "01",
-    title: "Deep dive into product",
+    title: "Deep Dive into a Product",
     desc: "Work closely with product & engineering to understand the technology and real value",
   },
   {
     num: "02",
-    title: "Positioning & messaging",
+    title: "Positioning & Messaging",
     desc: "Translate complexity into clear, customer-focused narratives",
   },
   {
     num: "03",
-    title: "Offer packaging",
+    title: "Offer Packaging",
     desc: "Turn features into structured offers — use cases, pain points, benefits",
   },
   {
     num: "04",
-    title: "GTM execution",
+    title: "GTM Execution",
     desc: "Launch campaigns, coordinate teams, and drive market traction",
   },
 ];
