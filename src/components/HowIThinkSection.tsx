@@ -35,4 +35,51 @@ const HowIThinkSection = () => (
       >
         <p
           className="text-xs tracking-widest uppercase mb-4"
-          style={{ fontFa
+          style={{ fontFamily: 'Inter, sans-serif', color: '#7a7060' }}
+        >
+          Process
+        </p>
+        <h2
+          className="text-3xl md:text-4xl"
+          style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400 }}
+        >
+          How I turn products into{" "}
+          <em style={{ color: '#2B5EA7', fontStyle: 'italic' }}>market-ready offers</em>
+        </h2>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {steps.map((s, i) => (
+          <motion.div
+            key={s.num}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: i * 0.1 }}
+          >
+            <p
+              className="text-sm font-medium mb-3"
+              style={{ fontFamily: 'Inter, sans-serif', color: '#2B5EA7' }}
+            >
+              {s.num}
+            </p>
+            <h3
+              className="text-base font-medium mb-2"
+              style={{ fontFamily: 'Inter, sans-serif', color: '#1a1a1a' }}
+            >
+              {s.title}
+            </h3>
+            <p
+              className="text-sm leading-relaxed"
+              style={{ color: '#7a7060' }}
+            >
+              {s.desc}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+export default HowIThinkSection;
