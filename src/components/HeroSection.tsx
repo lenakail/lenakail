@@ -60,7 +60,7 @@ const HeroSection = () => (
             product, engineering, and market — from positioning to GTM execution.
           </p>
           
-            href="https://t.me/awesomelena"
+            <a href="https://t.me/awesomelena"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-7 py-3 rounded font-medium text-sm text-white transition-opacity hover:opacity-90"
