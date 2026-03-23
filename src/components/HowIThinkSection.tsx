@@ -24,7 +24,7 @@ const steps = [
 ];
 
 const HowIThinkSection = () => (
-  <section className="py-12 md:py-16">
+  <section className="py-8 md:py-10">
     <div className="section-container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
