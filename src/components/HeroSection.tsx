@@ -44,8 +44,8 @@ const HeroSection = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-base font-medium text-foreground mb-1">Lena Kail</p>
-          <p className="mono-text text-xs mb-8 tracking-widest uppercase" style={{ color: '#7a7060' }}>
+          <p className="text-lg font-medium mb-1" style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#1a1a1a' }}>Lena Kail</p>
+          <p className="text-sm mb-8 tracking-widest uppercase" style={{ fontFamily: 'Inter, sans-serif', color: '#7a7060', letterSpacing: '0.1em' }}>
             Product Marketing Manager
           </p>
           <h1
