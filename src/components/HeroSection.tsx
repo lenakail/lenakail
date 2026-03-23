@@ -44,17 +44,19 @@ const HeroSection = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-lg font-medium mb-1" style={{ fontFamily: "'Playfair Display', Georgia, serif", color: '#1a1a1a' }}>Lena Kail</p>
-          <p className="text-sm mb-8 tracking-widest uppercase" style={{ fontFamily: 'Inter, sans-serif', color: '#7a7060', letterSpacing: '0.1em' }}>
-            Product Marketing Manager
-          </p>
           <h1
-            className="text-4xl md:text-5xl leading-tight mb-5"
-            style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400 }}
-          >
-            I turn complex Web3 products into clear, compelling offers{" "}
-            <em style={{ color: '#2B5EA7', fontStyle: 'italic' }}>that people genuinely want to buy</em>
-          </h1>
+  className="text-5xl md:text-6xl mb-3"
+  style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 500, color: '#1a1a1a' }}
+>
+  Lena Kail
+</h1>
+<p
+  className="text-2xl md:text-3xl mb-6 leading-snug"
+  style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400, color: '#1a1a1a' }}
+>
+  From complex products to{" "}
+  <em style={{ color: '#2B5EA7', fontStyle: 'italic' }}>clear, compelling offers</em>
+</p>
           <p className="text-base max-w-lg mb-10 leading-relaxed" style={{ color: '#6b6357' }}>
             Product Marketing Manager with 6+ years of experience in Web3 & fintech. Bridging
             product, engineering, and market — from positioning to GTM execution.
