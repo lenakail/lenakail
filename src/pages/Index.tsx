@@ -13,7 +13,7 @@ const Index = () => (
     <AIWorkflowSection />
     <CTASection />
     <footer className="py-8 text-center text-muted-foreground text-xs mono-text border-t border-border">
-      © {new Date().getFullYear()} Lena Kail. Built with Lovable.
+      © {new Date().getFullYear()} Lena Kail.
     </footer>
   </main>
 );
