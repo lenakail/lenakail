@@ -85,12 +85,24 @@ const ExperienceSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="mb-16"
+        className="mb-12"
       >
-        <h2 className="section-title">
-          Professional <span className="gradient-text">Experience</span>
+        <p
+          className="text-xs tracking-widest uppercase mb-4"
+          style={{ fontFamily: 'Inter, sans-serif', color: '#7a7060' }}
+        >
+          Background
+        </p>
+        <h2
+          className="text-3xl md:text-4xl mb-4"
+          style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400 }}
+        >
+          Professional <em style={{ color: '#2B5EA7', fontStyle: 'italic' }}>experience</em>
         </h2>
-        <p className="text-muted-foreground max-w-2xl">
+        <p
+          className="text-sm max-w-2xl leading-relaxed"
+          style={{ fontFamily: 'Inter, sans-serif', color: '#7a7060' }}
+        >
           A track record of building, positioning, and scaling products across Web3, fintech, and B2B environments
         </p>
       </motion.div>
@@ -101,37 +113,14 @@ const ExperienceSection = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <Accordion type="single" collapsible className="space-y-3">
+        <Accordion type="single" collapsible>
           {jobs.map((job, i) => (
             <AccordionItem
               key={i}
               value={`job-${i}`}
-              className="card-glass border-border px-6 rounded-xl overflow-hidden"
+              style={{ borderBottom: '0.5px solid #ddd8cf' }}
             >
-              <AccordionTrigger className="hover:no-underline py-5">
-                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 text-left">
-                  <span className="font-semibold text-foreground">
-                    {job.role} — <span className="gradient-text">{job.company}</span>
-                  </span>
-                  <span className="mono-text text-muted-foreground text-xs">{job.dates}</span>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="pb-6">
-                <ul className="space-y-2 ml-1">
-                  {job.points.map((p, j) => (
-                    <li key={j} className="flex items-start gap-3 text-sm text-muted-foreground">
-                      <span className="w-1 h-1 rounded-full bg-primary mt-2 shrink-0" />
-                      {p}
-                    </li>
-                  ))}
-                </ul>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </motion.div>
-    </div>
-  </section>
-);
-
-export default ExperienceSection;
+              <AccordionTrigger
+                className="hover:no-underline py-5"
+                style={{ textDecoration: 'none' }}
+              >
