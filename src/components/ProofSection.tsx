@@ -19,4 +19,4 @@ const ProofSection = () => (
       >
         <p
           className="text-xs tracking-widest uppercase mb-4"
-          style={{ fontFamily: 'Inter, sans-serif', color: '#7a706
+          style={{ fontFamily: 'Inter, sans-serif', color: '#7a7060' }}
