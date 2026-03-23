@@ -89,19 +89,19 @@ const ExperienceSection = () => (
       >
         <p
           className="text-xs tracking-widest uppercase mb-4"
-          style={{ fontFamily: 'Inter, sans-serif', color: '#7a7060' }}
+          style={{ fontFamily: "Inter, sans-serif", color: "#7a7060" }}
         >
           Background
         </p>
         <h2
           className="text-3xl md:text-4xl mb-4"
-          style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400 }}
+          style={{ fontFamily: "Playfair Display, Georgia, serif", fontWeight: 400 }}
         >
-          Professional <em style={{ color: '#2B5EA7', fontStyle: 'italic' }}>experience</em>
+          Professional <em style={{ color: "#2B5EA7", fontStyle: "italic" }}>experience</em>
         </h2>
         <p
           className="text-sm max-w-2xl leading-relaxed"
-          style={{ fontFamily: 'Inter, sans-serif', color: '#7a7060' }}
+          style={{ fontFamily: "Inter, sans-serif", color: "#7a7060" }}
         >
           A track record of building, positioning, and scaling products across Web3, fintech, and B2B environments
         </p>
@@ -118,9 +118,59 @@ const ExperienceSection = () => (
             <AccordionItem
               key={i}
               value={`job-${i}`}
-              style={{ borderBottom: '0.5px solid #ddd8cf' }}
+              style={{ borderBottom: "0.5px solid #ddd8cf" }}
             >
               <AccordionTrigger
                 className="hover:no-underline py-5"
-                style={{ textDecoration: 'none' }}
+                style={{ textDecoration: "none" }}
               >
+                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6 text-left w-full pr-4">
+                  <span
+                    className="text-sm font-medium"
+                    style={{ fontFamily: "Inter, sans-serif", color: "#1a1a1a" }}
+                  >
+                    {job.role} —{" "}
+                    <span style={{ color: "#2B5EA7" }}>{job.company}</span>
+                  </span>
+                  <span
+                    className="text-xs"
+                    style={{ fontFamily: "Inter, sans-serif", color: "#9a9080" }}
+                  >
+                    {job.dates}
+                  </span>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="pb-5">
+                <ul className="space-y-1 ml-1">
+                  {job.points.map((p, j) => (
+                    <li
+                      key={j}
+                      className="flex items-start gap-3"
+                      style={{ fontFamily: "Inter, sans-serif" }}
+                    >
+                      <span
+                        className="shrink-0 mt-2"
+                        style={{
+                          width: "4px",
+                          height: "4px",
+                          borderRadius: "50%",
+                          background: "#2B5EA7",
+                          display: "inline-block",
+                        }}
+                      />
+                      <span className="text-sm leading-relaxed" style={{ color: "#6b6357" }}>
+                        {p}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </motion.div>
+    </div>
+  </section>
+);
+
+export default ExperienceSection;
