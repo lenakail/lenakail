@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const metrics = [
-  { value: "13.8M", label: "organic reach via social media strategy" },
+  { value: "13.8M", label: "organic reach via PR-strategy" },
   { value: "5x", label: "community growth from 2K to 10K in 4 months" },
   { value: "4x", label: "token holders growth through product & marketing alignment" },
   { value: "+20%", label: "sales via tokenized product launch" },
