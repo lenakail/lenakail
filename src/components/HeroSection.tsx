@@ -15,7 +15,7 @@ const features = [
   {
     icon: Sparkles,
     title: "AI-Driven Execution",
-    desc: "Using AI tools (incl. Lovable) to rapidly create and iterate marketing assets",
+    desc: "Using AI tools to rapidly create and iterate marketing assets",
   },
   {
     icon: Target,
