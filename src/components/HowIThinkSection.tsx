@@ -4,7 +4,7 @@ const steps = [
   {
     num: "01",
     title: "Deep Dive into a Product",
-    desc: "Work closely with product & engineering to understand the technology and real value",
+    desc: "Work closely with product & devs to understand the technology and real value",
   },
   {
     num: "02",
