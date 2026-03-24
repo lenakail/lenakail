@@ -10,7 +10,7 @@ const jobs = [
   {
     role: "Brand / PR Manager",
     company: "10101.art",
-    dates: "Sep 2025 — Present",
+    dates: "Sep 2025 — Mar 2026",
     points: [
       "Translated Web3 product concepts (tokenized art, ownership) into clear positioning and messaging",
       "Built brand platform, positioning, and Tone of Voice",
@@ -30,9 +30,9 @@ const jobs = [
       "Led go-to-market strategy and execution",
       "Grew community 5x (3K → 15K)",
       "Increased token holders 4x (10K → 40K)",
-      "Coordinated cross-functional teams (product, engineering, marketing)",
+      "Coordinated cross-functional teams (product, devs, marketing)",
       "Supported website redesign as acting Product Manager",
-      "Led marketing execution for industry events (Token2049, ETHGlobal, Binance Blockchain Week), including GTM assets, merch, and meetups",
+      "Led marketing execution for industry events (Token2049, ETHGlobal Hackathons, Binance Blockchain Week), including GTM assets, merch, and meetups",
     ],
   },
   {
