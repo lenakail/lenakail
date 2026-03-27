@@ -42,7 +42,7 @@ const Index = () => (
           className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-medium text-sm text-white transition-opacity hover:opacity-90"
           style={{ backgroundColor: "#2B5EA7", fontFamily: "Inter, sans-serif" }}
         >
-          View Case Studies &#8594;
+          View Case Studies
         </a>
       </div>
     </section>
