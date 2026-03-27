@@ -110,8 +110,12 @@ const LinkIcon = ({ type }: { type?: string }) => {
 
 const ResultCard = ({ value, label }: { value: string; label: string }) => (
   <div
-    className="p-8 rounded-xl w-full flex flex-col"
-    style={{ background: "#ffffff", border: "1px solid #ddd8cf" }}
+    className="p-8 rounded-xl flex flex-col"
+    style={{
+      background: "#ffffff",
+      border: "1px solid #ddd8cf",
+      height: "100%",
+    }}
   >
     <div
       className="text-4xl md:text-5xl mb-3"
@@ -225,7 +229,7 @@ const PortfolioPage = () => (
               {c.challenge}
             </p>
 
-            {/* Results — full width cards like screenshot */}
+            {/* Results */}
             <div className="mb-12">
               <p
                 className="text-xs tracking-widest uppercase mb-5"
@@ -233,20 +237,19 @@ const PortfolioPage = () => (
               >
                 Results
               </p>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-               {c.results.map((r, j) => (
-                <motion.div
-                key={j}
-                className="h-full"
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: j * 0.08 }}
-              >
-              <ResultCard value={r.value} label={r.label} />
-              </motion.div>
-              ))}
-          </div>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4" style={{ alignItems: "stretch" }}>
+                {c.results.map((r, j) => (
+                  <motion.div
+                    key={j}
+                    style={{ height: "100%" }}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: j * 0.08 }}
+                  >
+                    <ResultCard value={r.value} label={r.label} />
+                  </motion.div>
+                ))}
               </div>
             </div>
 
