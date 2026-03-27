@@ -110,7 +110,7 @@ const LinkIcon = ({ type }: { type?: string }) => {
 
 const ResultCard = ({ value, label }: { value: string; label: string }) => (
   <div
-    className="p-8 rounded-xl"
+    className="p-8 rounded-xl w-full flex flex-col"
     style={{ background: "#ffffff", border: "1px solid #ddd8cf" }}
   >
     <div
@@ -233,7 +233,7 @@ const PortfolioPage = () => (
               >
                 Results
               </p>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
                 {c.results.map((r, j) => (
                   <motion.div
                     key={j}
