@@ -13,8 +13,7 @@ const Index = () => {
       <ProofSection />
       <section style={{ backgroundColor: "#F7F4EE", padding: "4rem 0", textAlign: "center" }}>
         <div className="section-container">
-          <a href="/portfolio" style={{ backgroundColor: "#2B5EA7", color: "white", padding: "1rem 2rem", borderRadius: "0.5rem", fontFamily: "Inter, sans-serif", textDecoration: "none", fontSize: "0.875rem", display: "inline-block" }}>View Case Studies</a>
-        </div>
+      <a href="/portfolio" style={{ backgroundColor: "#E8631A", color: "white", padding: "1rem 2rem", borderRadius: "0.5rem", fontFamily: "Inter, sans-serif", textDecoration: "none", fontSize: "0.875rem", display: "inline-block" }}>View Case Studies</a>        </div>
       </section>
       <HowIThinkSection />
       <AIWorkflowSection />
