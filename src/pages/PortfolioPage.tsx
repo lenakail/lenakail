@@ -233,18 +233,20 @@ const PortfolioPage = () => (
               >
                 Results
               </p>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
-                {c.results.map((r, j) => (
-                  <motion.div
-                    key={j}
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: j * 0.08 }}
-                  >
-                    <ResultCard value={r.value} label={r.label} />
-                  </motion.div>
-                ))}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+               {c.results.map((r, j) => (
+                <motion.div
+                key={j}
+                className="h-full"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: j * 0.08 }}
+              >
+              <ResultCard value={r.value} label={r.label} />
+              </motion.div>
+              ))}
+          </div>
               </div>
             </div>
 
