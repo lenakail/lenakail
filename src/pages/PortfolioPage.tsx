@@ -17,13 +17,13 @@ const cases = [
       "Managed content and campaign release calendar aligned with product milestones",
       "Owned website revamp as acting PM — improved developer-facing messaging and UX",
       "Led marketing execution for Token2049, ETHGlobal Hackathons (SF & Singapore), and Binance Blockchain Week",
-      "Secured integrations and partnerships (SafePal, ETHGlobal) and drove ecosystem media coverage",
+      "Secured integrations and partnerships (SafePal, ETHGlobal) and drove tier-1 media coverage across The Block, CoinTelegraph, BeInCrypto, and CoinGecko",
     ],
     results: [
       { value: "5x", label: "community growth in 4 months (3K → 15K)" },
       { value: "4x", label: "token holders growth (10K → 40K)" },
       { value: "14K→90K", label: "Twitter / X audience" },
-      { value: "Top Tier", label: "coverage: The Block, CoinTelegraph, BeInCrypto, CoinGecko" },
+      { value: "x5", label: "site traffic via tier-1 media & KOL campaigns (2K → 10K monthly visitors)" },
     ],
     links: [
       { label: "The Block — Cross-chain Bridge Launch", url: "https://www.theblock.co/post/182643/airdao-launches-ethereum-cross-chain-bridge-for-its-layer-1-network" },
@@ -45,18 +45,19 @@ const cases = [
     challenge:
       "FBS needed to grow brand trust and visibility across SEA, MENA, and LatAm — highly competitive, regulated markets. The flagship initiative was a high-profile global partnership with FC Barcelona.",
     what: [
-      "Led negotiations and full activation of the FC Barcelona global partnership — from signing to communications rollout across multiple regions",
-      "Developed and executed global PR strategy covering SEA, MENA, LatAm, and Europe",
-      "Conceptualized and produced joint contests with FC Barcelona to drive engagement and brand awareness",
-      "Organized a live-streamed global prize draw with custom lottery equipment — 12-year anniversary campaign",
-      "Collaborated with regional influencers on co-created campaigns: 7.6M views (Vietnam), 3.2M views (India)",
+      "FC Barcelona Partnership — Acting as PM of the partnership across 4 global product lines, orchestrating all deliverables to meet contractual obligations: stadium LED creatives, website updates, promo launches, contests, and announcements — all on time and fully compliant with Barcelona's strict brand guidelines",
+      "Led partnership negotiations and full communications rollout across multiple regions — from signing to global activation",
+      "Conceptualized and produced joint contests with FC Barcelona, including a live-streamed global prize draw with custom lottery equipment for FBS's 12-year anniversary campaign",
+      "Global PR Strategy — Developed and executed PR strategy across SEA, MENA, LatAm, and Europe during COVID-19; despite the pandemic, user base grew from 16M to 20M (2020–2021)",
+      "Organized FBS presence at industry exhibitions across MENA",
+      "Supported influencer briefs and messaging quality for regional campaigns, including top-performing collaborations reaching 7.6M views (Vietnam) and 3.2M views (India)",
       "Managed brand reputation across Trustpilot, App Store, Google Play; led crisis communications for data/security incidents",
     ],
     results: [
-      { value: "7.6M", label: "views — influencer campaign, Vietnam" },
-      { value: "3.2M", label: "views — influencer campaign, India" },
-      { value: "Global", label: "FC Barcelona partnership across SEA, MENA, LatAm, Europe" },
-      { value: "×2", label: "Best Broker awards — SEA & Thailand 2021" },
+      { value: "Up to 15%", label: "Brand Lift across key markets via FC Barcelona partnership (based on brand surveys)" },
+      { value: "200+", label: "earned media mentions driven by Barcelona collaboration" },
+      { value: "16M→20M", label: "users grown during COVID-19 (2020–2021)" },
+      { value: "5", label: "Best Forex Broker awards in 2020" },
     ],
     links: [
       { label: "FC Barcelona — Partnership Announcement", url: "https://www.fcbarcelona.com/en/news/1573644/fc-barcelona-and-fbs-sign-new-global-partnership-agreement" },
@@ -89,7 +90,7 @@ const cases = [
     results: [
       { value: "13.8M", label: "media reach — zero paid spend" },
       { value: "13", label: "organic media placements" },
-      { value: "+20%", label: "sales uplift from Picasso launch via single organic publication" },
+      { value: "+20%", label: "sales uplift from Picasso launch via BNB Chain audience activation" },
       { value: "500K+", label: "social reach from Art Talks Dubai" },
     ],
     links: [
@@ -139,6 +140,22 @@ const ResultCard = ({ value, label }: { value: string; label: string }) => (
 const PortfolioPage = () => (
   <main className="min-h-screen py-20" style={{ backgroundColor: "#F7F4EE" }}>
     <div className="section-container">
+
+      {/* Back button */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4 }}
+        className="mb-12"
+      >
+        <a
+          href="/"
+          className="inline-flex items-center gap-2 text-sm hover:opacity-70 transition-opacity"
+          style={{ fontFamily: "Inter, sans-serif", color: "#2B5EA7" }}
+        >
+          ← Back to main
+        </a>
+      </motion.div>
 
       {/* Header */}
       <motion.div
@@ -329,26 +346,52 @@ const PortfolioPage = () => (
         ))}
       </div>
 
-      {/* Footer nav */}
+      {/* CTA */}
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mt-24 flex items-center justify-between"
+        transition={{ duration: 0.5 }}
+        className="mt-24"
       >
-        <a
-          href="/"
-          className="text-sm hover:opacity-60 transition-opacity"
-          style={{ fontFamily: "Inter, sans-serif", color: "#2B5EA7" }}
+        <div
+          className="p-12 md:p-16 rounded-2xl text-center"
+          style={{ background: "#ffffff", border: "1px solid #ddd8cf" }}
         >
-          ← Back to main
-        </a>
-        <span
-          className="text-xs mono-text"
-          style={{ color: "#9a9080" }}
-        >
-          lenakail.com/portfolio
-        </span>
+          <h2
+            className="text-3xl md:text-4xl mb-4"
+            style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400, color: "#1a1a1a" }}
+          >
+            Get in{" "}
+            <em style={{ color: "#E8631A", fontStyle: "italic" }}>touch</em>
+          </h2>
+          <p
+            className="text-sm mb-10 max-w-md mx-auto leading-relaxed"
+            style={{ fontFamily: "Inter, sans-serif", color: "#7a7060" }}
+          >
+            Ready to bring this experience to your product.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://www.linkedin.com/in/lena-kail-b25251198/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-medium text-sm text-white transition-opacity hover:opacity-90"
+              style={{ backgroundColor: "#2B5EA7", fontFamily: "Inter, sans-serif" }}
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://t.me/awesomelena"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-medium text-sm text-white transition-opacity hover:opacity-90"
+              style={{ backgroundColor: "#E8631A", fontFamily: "Inter, sans-serif" }}
+            >
+              Telegram
+            </a>
+          </div>
+        </div>
       </motion.div>
 
     </div>
