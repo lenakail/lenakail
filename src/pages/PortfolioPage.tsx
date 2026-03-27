@@ -44,19 +44,31 @@ const cases = [
     title: "FC Barcelona Partnership & Global PR Strategy for a Regulated Fintech Brand",
     challenge:
       "FBS needed to grow brand trust and visibility across SEA, MENA, and LatAm — highly competitive, regulated markets. The flagship initiative was a high-profile global partnership with FC Barcelona.",
-    what: [
-      "FC Barcelona Partnership — Acting as PM of the partnership across 4 global product lines, orchestrating all deliverables to meet contractual obligations: stadium LED creatives, website updates, promo launches, contests, and announcements — all on time and fully compliant with Barcelona's strict brand guidelines",
-      "Led partnership negotiations and full communications rollout across multiple regions — from signing to global activation",
-      "Conceptualized and produced joint contests with FC Barcelona, including a live-streamed global prize draw with custom lottery equipment for FBS's 12-year anniversary campaign",
-      "Global PR Strategy — Developed and executed PR strategy across SEA, MENA, LatAm, and Europe during COVID-19; despite the pandemic, user base grew from 16M to 20M (2020–2021)",
-      "Organized FBS presence at industry exhibitions across MENA",
-      "Supported influencer briefs and messaging quality for regional campaigns, including top-performing collaborations reaching 7.6M views (Vietnam) and 3.2M views (India)",
-      "Managed brand reputation across Trustpilot, App Store, Google Play; led crisis communications for data/security incidents",
+    whatSections: [
+      {
+        title: "FC Barcelona Partnership",
+        items: [
+          "Led partnership negotiations and full communications rollout across multiple regions — from signing to global activation",
+          "Acting as PM of the partnership across 4 global product lines, orchestrating all deliverables to meet contractual obligations: website and app updates, promo launches, contests, stadium LED creatives, and announcements — all on time and fully compliant with Barcelona's strict brand guidelines",
+          "Conceptualized and produced joint contests with FC Barcelona, including a live-streamed global prize draw with custom lottery equipment for FBS's 12-year anniversary campaign",
+        ]
+      },
+      {
+        title: "Global PR Strategy",
+        items: [
+          "Developed and executed PR strategy across SEA, MENA, LatAm, and Europe during COVID-19; contributed to user base growth from 16M to 20M (2020–2021) through integrated PR and brand efforts",
+          "Organized FBS presence at industry exhibitions across MENA",
+          "Supported influencer briefs and messaging quality for regional campaigns, including top-performing collaborations reaching 7.6M views (Vietnam) and 3.2M views (India)",
+          "Managed brand reputation across Trustpilot, App Store, Google Play; led crisis communications for data/security incidents",
+          "Organized 15 charity events across LatAm, MENA, and SEA",
+        ]
+      }
     ],
+    what: [],
     results: [
       { value: "Up to 15%", label: "Brand Lift across key markets via FC Barcelona partnership (based on brand surveys)" },
       { value: "200+", label: "earned media mentions driven by Barcelona collaboration" },
-      { value: "16M→20M", label: "users grown during COVID-19 (2020–2021)" },
+      { value: "15", label: "charity events organized across LatAm, MENA, and SEA" },
       { value: "5", label: "Best Forex Broker awards in 2020" },
     ],
     links: [
@@ -278,29 +290,67 @@ const PortfolioPage = () => (
               >
                 What I did
               </p>
-              <ul className="space-y-3 max-w-2xl">
-                {c.what.map((w, j) => (
-                  <li key={j} className="flex items-start gap-3">
-                    <span
-                      className="shrink-0"
-                      style={{
-                        marginTop: "8px",
-                        width: "4px",
-                        height: "4px",
-                        borderRadius: "50%",
-                        background: "#2B5EA7",
-                        display: "inline-block",
-                      }}
-                    />
-                    <span
-                      className="text-sm leading-relaxed"
-                      style={{ fontFamily: "Inter, sans-serif", color: "#4a4035" }}
-                    >
-                      {w}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              {c.whatSections ? (
+                <div className="space-y-8 max-w-2xl">
+                  {c.whatSections.map((section, si) => (
+                    <div key={si}>
+                      <p
+                        className="text-xs font-medium mb-3"
+                        style={{ fontFamily: "Inter, sans-serif", color: "#2B5EA7", letterSpacing: "0.03em" }}
+                      >
+                        {section.title}
+                      </p>
+                      <ul className="space-y-3">
+                        {section.items.map((w, j) => (
+                          <li key={j} className="flex items-start gap-3">
+                            <span
+                              className="shrink-0"
+                              style={{
+                                marginTop: "8px",
+                                width: "4px",
+                                height: "4px",
+                                borderRadius: "50%",
+                                background: "#2B5EA7",
+                                display: "inline-block",
+                              }}
+                            />
+                            <span
+                              className="text-sm leading-relaxed"
+                              style={{ fontFamily: "Inter, sans-serif", color: "#4a4035" }}
+                            >
+                              {w}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <ul className="space-y-3 max-w-2xl">
+                  {c.what.map((w, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <span
+                        className="shrink-0"
+                        style={{
+                          marginTop: "8px",
+                          width: "4px",
+                          height: "4px",
+                          borderRadius: "50%",
+                          background: "#2B5EA7",
+                          display: "inline-block",
+                        }}
+                      />
+                      <span
+                        className="text-sm leading-relaxed"
+                        style={{ fontFamily: "Inter, sans-serif", color: "#4a4035" }}
+                      >
+                        {w}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
 
             {/* Public proof links */}
