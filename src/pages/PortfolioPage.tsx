@@ -31,7 +31,7 @@ const cases = [
       { value: "x5", label: "community growth in 4 months (3k → 15k)" },
       { value: "x4", label: "token holders growth (10k → 40k)" },
       { value: "x6", label: "Twitter / X audience (14k → 90k)" },
-      { value: "x5", label: "site traffic via tier-1 media & KOL campaigns (2k → 10k monthly visitors)" },
+      { value: "x5", label: "website MAU (2k → 10k)" },
     ],
     links: [
       { label: "The Block — Cross-chain Bridge Launch", url: "https://www.theblock.co/post/182643/airdao-launches-ethereum-cross-chain-bridge-for-its-layer-1-network" },
