@@ -18,7 +18,7 @@ const cases = [
     tag: "Layer-1 Blockchain · Web3",
     title: "Building Product Marketing from Scratch for a Community-Governed Blockchain",
     challenge:
-      "AirDAO had a product and a vision — but no marketing function, no positioning, and a community of 3K. The task was to build everything from zero: strategy, team, messaging, and GTM.",
+      "AirDAO had a product and a vision — but no marketing function, no positioning, and a community of 3k. The task was to build everything from zero: strategy, team, messaging, and GTM.",
     what: [
       "Defined positioning, messaging framework, and GTM playbook for a developer-focused L1 blockchain",
       "Acted as bridge between product, engineering, and marketing — translated technical updates into user-facing campaigns",
@@ -28,10 +28,10 @@ const cases = [
       "Secured integrations and partnerships (SafePal, ETHGlobal) and drove tier-1 media coverage across The Block, CoinTelegraph, BeInCrypto, and CoinGecko",
     ],
     results: [
-      { value: "x5", label: "community growth in 4 months (3k → 15k)" },
-      { value: "x4", label: "token holders growth (10k → 40k)" },
-      { value: "x6", label: "Twitter / X audience (14k → 90k)" },
-      { value: "x5", label: "website MAU (2k → 10k)" },
+      { value: "5x", label: "community growth in 4 months (3k → 15k)" },
+      { value: "4x", label: "token holders growth (10k → 40k)" },
+      { value: "6x", label: "Twitter / X audience (14k → 90k)" },
+      { value: "5x", label: "website MAU (2k → 10k)" },
     ],
     links: [
       { label: "The Block — Cross-chain Bridge Launch", url: "https://www.theblock.co/post/182643/airdao-launches-ethereum-cross-chain-bridge-for-its-layer-1-network" },
@@ -75,7 +75,7 @@ const cases = [
     ],
     what: [],
     results: [
-      { value: "Up to 15%", label: "Brand Lift across key markets (based on brand surveys)" },
+      { value: "15%", label: "Brand Lift across key markets (based on brand surveys)" },
       { value: "200+", label: "earned media mentions driven by Barcelona collaboration" },
       { value: "15", label: "charity events organized across LatAm, MENA, and SEA" },
       { value: "5", label: "Best Forex Broker awards in 2020" },
