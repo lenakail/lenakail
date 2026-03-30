@@ -28,10 +28,10 @@ const cases = [
       "Secured integrations and partnerships (SafePal, ETHGlobal) and drove tier-1 media coverage across The Block, CoinTelegraph, BeInCrypto, and CoinGecko",
     ],
     results: [
-      { value: "5x", label: "community growth in 4 months (3K → 15K)" },
-      { value: "4x", label: "token holders growth (10K → 40K)" },
-      { value: "14K→90K", label: "Twitter / X audience" },
-      { value: "x5", label: "site traffic via tier-1 media & KOL campaigns (2K → 10K monthly visitors)" },
+      { value: "x5", label: "community growth in 4 months (3k → 15k)" },
+      { value: "x4", label: "token holders growth (10k → 40k)" },
+      { value: "x6", label: "Twitter / X audience (14k → 90k)" },
+      { value: "x5", label: "site traffic via tier-1 media & KOL campaigns (2k → 10k monthly visitors)" },
     ],
     links: [
       { label: "The Block — Cross-chain Bridge Launch", url: "https://www.theblock.co/post/182643/airdao-launches-ethereum-cross-chain-bridge-for-its-layer-1-network" },
@@ -113,7 +113,7 @@ const cases = [
       { value: "13.8M", label: "media reach — zero paid spend" },
       { value: "13", label: "organic media placements" },
       { value: "+20%", label: "sales uplift from Picasso launch via BNB Chain audience activation" },
-      { value: "500K+", label: "social reach from Art Talks Dubai" },
+      { value: "500k+", label: "social reach from Art Talks Dubai" },
     ],
     links: [
       { label: "Visit Dubai — Exhibition Listing", url: "https://www.visitdubai.com/en/festivals-and-events/dubai-events-calendar/unseen-masterpieces" },
