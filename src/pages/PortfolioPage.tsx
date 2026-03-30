@@ -237,32 +237,6 @@ const PortfolioPage = () => {
         </a>
       </motion.div>
 
-      {/* Case navigation */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="flex items-center gap-2 mb-16 flex-wrap"
-      >
-        {cases.map((c) => (
-          <a
-            key={c.id}
-            href={`#${c.id}`}
-            className="inline-flex items-center gap-2 rounded-full text-xs transition-opacity hover:opacity-70"
-            style={{
-              fontFamily: "Inter, sans-serif",
-              color: "#4a4035",
-              background: "#ffffff",
-              border: "1px solid #ddd8cf",
-              padding: "6px 14px",
-            }}
-          >
-            <CaseIcon name={c.emoji} size={13} />
-            <span>{c.company}</span>
-          </a>
-        ))}
-      </motion.div>
-
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -293,6 +267,32 @@ const PortfolioPage = () => {
         >
           A selection of projects across Web3, fintech, and global brand marketing — with real outcomes and public proof.
         </p>
+      </motion.div>
+
+      {/* Case navigation */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="flex items-center gap-2 mb-16 flex-wrap"
+      >
+        {cases.map((c) => (
+          <a
+            key={c.id}
+            href={"#" + c.id}
+            className="inline-flex items-center gap-2 rounded-full text-xs transition-opacity hover:opacity-70"
+            style={{
+              fontFamily: "Inter, sans-serif",
+              color: "#4a4035",
+              background: "#ffffff",
+              border: "1px solid #ddd8cf",
+              padding: "6px 14px",
+            }}
+          >
+            <CaseIcon name={c.emoji} size={13} />
+            <span>{c.company}</span>
+          </a>
+        ))}
       </motion.div>
 
       {/* Cases */}
