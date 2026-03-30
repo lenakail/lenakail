@@ -75,7 +75,7 @@ const cases = [
     ],
     what: [],
     results: [
-      { value: "Up to 15%", label: "Brand Lift across key markets via FC Barcelona partnership (based on brand surveys)" },
+      { value: "Up to 15%", label: "Brand Lift across key markets (based on brand surveys)" },
       { value: "200+", label: "earned media mentions driven by Barcelona collaboration" },
       { value: "15", label: "charity events organized across LatAm, MENA, and SEA" },
       { value: "5", label: "Best Forex Broker awards in 2020" },
