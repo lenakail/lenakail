@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Youtube, Linkedin, Send, ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -11,6 +11,7 @@ import {
 const cases = [
   {
     id: "airdao",
+    emoji: "🔗",
     label: "Case Study 01",
     company: "AirDAO",
     period: "2022 — 2025",
@@ -44,6 +45,7 @@ const cases = [
   },
   {
     id: "fbs",
+    emoji: "⚽",
     label: "Case Study 02",
     company: "FBS Trading Broker",
     period: "2019 — 2021",
@@ -91,6 +93,7 @@ const cases = [
   },
   {
     id: "10101",
+    emoji: "🎨",
     label: "Case Study 03",
     company: "10101.art",
     period: "2025 — Present",
@@ -156,8 +159,53 @@ const ResultCard = ({ value, label }: { value: string; label: string }) => (
   </div>
 );
 
-const PortfolioPage = () => (
+const PortfolioPage = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
   <main className="min-h-screen py-20" style={{ backgroundColor: "#F7F4EE" }}>
+
+      {/* Sticky header */}
+      <div
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+        style={{
+          background: scrolled ? "rgba(247, 244, 238, 0.95)" : "transparent",
+          backdropFilter: scrolled ? "blur(8px)" : "none",
+          borderBottom: scrolled ? "0.5px solid #ddd8cf" : "none",
+          padding: scrolled ? "12px 0" : "0",
+          pointerEvents: scrolled ? "auto" : "none",
+          opacity: scrolled ? 1 : 0,
+        }}
+      >
+        <div className="section-container flex items-center justify-between">
+          <a
+            href="/"
+            className="text-sm hover:opacity-60 transition-opacity"
+            style={{ fontFamily: "Inter, sans-serif", color: "#2B5EA7" }}
+          >
+            ← Lena Kail
+          </a>
+          <div className="flex items-center gap-6">
+            {cases.map((c) => (
+              <a
+                key={c.id}
+                href={"#" + c.id}
+                className="text-xs hover:opacity-60 transition-opacity"
+                style={{ fontFamily: "Inter, sans-serif", color: "#7a7060" }}
+              >
+                {c.emoji} {c.company}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
     <div className="section-container">
 
       {/* Back button */}
@@ -174,6 +222,32 @@ const PortfolioPage = () => (
         >
           ← Back to main
         </a>
+      </motion.div>
+
+      {/* Case navigation */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="flex items-center gap-2 mb-16 flex-wrap"
+      >
+        {cases.map((c) => (
+          <a
+            key={c.id}
+            href={`#${c.id}`}
+            className="inline-flex items-center gap-2 rounded-full text-xs transition-opacity hover:opacity-70"
+            style={{
+              fontFamily: "Inter, sans-serif",
+              color: "#4a4035",
+              background: "#ffffff",
+              border: "1px solid #ddd8cf",
+              padding: "6px 14px",
+            }}
+          >
+            <span>{c.emoji}</span>
+            <span>{c.company}</span>
+          </a>
+        ))}
       </motion.div>
 
       {/* Header */}
@@ -213,6 +287,7 @@ const PortfolioPage = () => (
         {cases.map((c, i) => (
           <motion.div
             key={c.id}
+            id={c.id}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -242,17 +317,19 @@ const PortfolioPage = () => (
               </span>
             </div>
 
-            <h2
-              className="text-2xl md:text-3xl mb-4"
-              style={{
-                fontFamily: "'Playfair Display', Georgia, serif",
-                fontWeight: 400,
-                color: "#1a1a1a",
-                maxWidth: "700px",
-              }}
-            >
-              {c.title}
-            </h2>
+            <div className="flex items-start gap-3 mb-4" style={{ maxWidth: "700px" }}>
+              <span className="text-3xl mt-1" role="img">{c.emoji}</span>
+              <h2
+                className="text-2xl md:text-3xl"
+                style={{
+                  fontFamily: "'Playfair Display', Georgia, serif",
+                  fontWeight: 400,
+                  color: "#1a1a1a",
+                }}
+              >
+                {c.title}
+              </h2>
+            </div>
 
             <p
               className="text-sm leading-relaxed mb-12"
@@ -365,7 +442,7 @@ const PortfolioPage = () => (
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 card-glass rounded-lg hover-lift"
-                      style={{ padding: "7px 13px" }}
+                      style={{ padding: "5px 10px" }}
                     >
                       <LinkIcon type={link.type} />
                       <span
@@ -443,6 +520,8 @@ const PortfolioPage = () => (
 
     </div>
   </main>
-);
+
+  );
+};
 
 export default PortfolioPage;
