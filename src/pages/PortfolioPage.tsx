@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Youtube, Linkedin, Send, ChevronDown } from "lucide-react";
-import { useState, useEffect } from "react";
+import { ExternalLink, Youtube, Linkedin, Send, ChevronDown, Layers, Trophy, Palette } from "lucide-react";
+import React, { useState, useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -11,7 +11,7 @@ import {
 const cases = [
   {
     id: "airdao",
-    emoji: "🔗",
+    emoji: "layers",
     label: "Case Study 01",
     company: "AirDAO",
     period: "2022 — 2025",
@@ -34,18 +34,18 @@ const cases = [
       { value: "x5", label: "site traffic via tier-1 media & KOL campaigns (2K → 10K monthly visitors)" },
     ],
     links: [
-      { label: "The Block", url: "https://www.theblock.co/post/182643/airdao-launches-ethereum-cross-chain-bridge-for-its-layer-1-network" },
-      { label: "CoinGecko", url: "https://www.coingecko.com/learn/pivotal-airdao-tokenomics-update" },
-      { label: "BeInCrypto", url: "https://beincrypto.com/airdao-collaborates-with-safepal-launches-kosmos-and-joins-ethglobal-hackathons/" },
-      { label: "CoinTelegraph", url: "https://cointelegraph.com/sponsored/whales-sybil-attacks-and-low-trust-can-daos-avoid-centralization-pitfalls" },
-      { label: "ETHGlobal SF", url: "https://ethglobal.com/events/sanfrancisco2024/prizes/airdao" },
-      { label: "Binance Square", url: "https://www.binance.com/en/square/post/2024-08-29-airdao-becomes-major-sponsor-of-ethglobal-hackathon-in-singapore-12806977067529" },
-      { label: "ETHGlobal Presentation", url: "https://www.youtube.com/watch?v=rYx4KljevhM", type: "youtube" },
+      { label: "The Block — Cross-chain Bridge Launch", url: "https://www.theblock.co/post/182643/airdao-launches-ethereum-cross-chain-bridge-for-its-layer-1-network" },
+      { label: "CoinGecko — Tokenomics Update", url: "https://www.coingecko.com/learn/pivotal-airdao-tokenomics-update" },
+      { label: "BeInCrypto — SafePal Integration", url: "https://beincrypto.com/airdao-collaborates-with-safepal-launches-kosmos-and-joins-ethglobal-hackathons/" },
+      { label: "CoinTelegraph — DAO Governance", url: "https://cointelegraph.com/sponsored/whales-sybil-attacks-and-low-trust-can-daos-avoid-centralization-pitfalls" },
+      { label: "ETHGlobal SF — AirDAO Prize Track", url: "https://ethglobal.com/events/sanfrancisco2024/prizes/airdao" },
+      { label: "Binance Square — ETHGlobal Sponsorship", url: "https://www.binance.com/en/square/post/2024-08-29-airdao-becomes-major-sponsor-of-ethglobal-hackathon-in-singapore-12806977067529" },
+      { label: "Conference Presentation", url: "https://www.youtube.com/watch?v=rYx4KljevhM", type: "youtube" },
     ],
   },
   {
     id: "fbs",
-    emoji: "⚽",
+    emoji: "trophy",
     label: "Case Study 02",
     company: "FBS Trading Broker",
     period: "2019 — 2021",
@@ -81,9 +81,9 @@ const cases = [
       { value: "5", label: "Best Forex Broker awards in 2020" },
     ],
     links: [
-      { label: "FC Barcelona", url: "https://www.fcbarcelona.com/en/news/1573644/fc-barcelona-and-fbs-sign-new-global-partnership-agreement" },
+      { label: "FC Barcelona — Partnership Announcement", url: "https://www.fcbarcelona.com/en/news/1573644/fc-barcelona-and-fbs-sign-new-global-partnership-agreement" },
       { label: "FC Barcelona — Joint Contest", url: "https://www.fcbarcelona.com/en/news/2181352/new-joint-contest-with-fbs-to-win-signed-barca-jersey" },
-      { label: "Finance Magnates", url: "https://www.financemagnates.com/thought-leadership/fbs-copy-challenge-a-social-trading-contest-for-tickets-to-fc-barcelona/" },
+      { label: "Finance Magnates — FBS Copy Challenge", url: "https://www.financemagnates.com/thought-leadership/fbs-copy-challenge-a-social-trading-contest-for-tickets-to-fc-barcelona/" },
       { label: "Vietnam Campaign — 7.6M views", url: "https://www.youtube.com/watch?v=wI2sORI_Uug", type: "youtube" },
       { label: "India Campaign — 3.2M views", url: "https://www.youtube.com/watch?v=9tRYgYOL3F4", type: "youtube" },
       { label: "Anniversary Draw Stream", url: "https://www.youtube.com/watch?v=YBKNaQckXi4", type: "youtube" },
@@ -93,7 +93,7 @@ const cases = [
   },
   {
     id: "10101",
-    emoji: "🎨",
+    emoji: "palette",
     label: "Case Study 03",
     company: "10101.art",
     period: "2025 — Present",
@@ -116,12 +116,12 @@ const cases = [
       { value: "500K+", label: "social reach from Art Talks Dubai" },
     ],
     links: [
-      { label: "Visit Dubai", url: "https://www.visitdubai.com/en/festivals-and-events/dubai-events-calendar/unseen-masterpieces" },
-      { label: "Platinumlist", url: "https://platinumlist.net/guide/7-unseen-artworks-by-picasso-dali-warhol-banksy-are-free-to-see-in-dubai-mall-this-october/" },
-      { label: "Buro 24/7", url: "https://buro247.me/lifestyle/buros-weekend-playbook-5-exciting-things-to-do-in-dubai-this-weekend-85/" },
-      { label: "WhatsOn", url: "https://whatson.ae/2025/10/picasso-to-banksy-visit-these-unseen-masterpieces-in-dubai-mall-this-month/" },
-      { label: "MEXC News", url: "https://www.mexc.co/en-IN/news/10101-art-when-luxury-meets-legacy-how-web3-brings-masterpieces-back-to-the-people/138897" },
-      { label: "BTCC", url: "https://www.btcc.com/en-US/square/Global%20Cryptocurrency/1096308" },
+      { label: "Visit Dubai — Exhibition Listing", url: "https://www.visitdubai.com/en/festivals-and-events/dubai-events-calendar/unseen-masterpieces" },
+      { label: "Platinumlist — Unseen Masterpieces", url: "https://platinumlist.net/guide/7-unseen-artworks-by-picasso-dali-warhol-banksy-are-free-to-see-in-dubai-mall-this-october/" },
+      { label: "Buro 24/7 — Weekend Playbook", url: "https://buro247.me/lifestyle/buros-weekend-playbook-5-exciting-things-to-do-in-dubai-this-weekend-85/" },
+      { label: "WhatsOn — Picasso to Banksy", url: "https://whatson.ae/2025/10/picasso-to-banksy-visit-these-unseen-masterpieces-in-dubai-mall-this-month/" },
+      { label: "MEXC — Luxury Meets Legacy", url: "https://www.mexc.co/en-IN/news/10101-art-when-luxury-meets-legacy-how-web3-brings-masterpieces-back-to-the-people/138897" },
+      { label: "BTCC — Coverage", url: "https://www.btcc.com/en-US/square/Global%20Cryptocurrency/1096308" },
     ],
   },
 ];
@@ -158,6 +158,19 @@ const ResultCard = ({ value, label }: { value: string; label: string }) => (
     </p>
   </div>
 );
+
+
+const iconMap: Record<string, React.ElementType> = {
+  layers: Layers,
+  trophy: Trophy,
+  palette: Palette,
+};
+
+const CaseIcon = ({ name, size = 20 }: { name: string; size?: number }) => {
+  const Icon = iconMap[name];
+  if (!Icon) return null;
+  return <Icon size={size} style={{ color: "#2B5EA7" }} />;
+};
 
 const PortfolioPage = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -199,7 +212,7 @@ const PortfolioPage = () => {
                 className="text-xs hover:opacity-60 transition-opacity"
                 style={{ fontFamily: "Inter, sans-serif", color: "#7a7060" }}
               >
-                {c.emoji} {c.company}
+                <CaseIcon name={c.emoji} size={12} /> {c.company}
               </a>
             ))}
           </div>
@@ -244,7 +257,7 @@ const PortfolioPage = () => {
               padding: "6px 14px",
             }}
           >
-            <span>{c.emoji}</span>
+            <CaseIcon name={c.emoji} size={13} />
             <span>{c.company}</span>
           </a>
         ))}
@@ -318,7 +331,9 @@ const PortfolioPage = () => {
             </div>
 
             <div className="flex items-start gap-3 mb-4" style={{ maxWidth: "700px" }}>
-              <span className="text-3xl mt-1" role="img">{c.emoji}</span>
+              <div className="mt-1 p-2 rounded-lg" style={{ background: "rgba(43, 94, 167, 0.08)" }}>
+                <CaseIcon name={c.emoji} size={22} />
+              </div>
               <h2
                 className="text-2xl md:text-3xl"
                 style={{
