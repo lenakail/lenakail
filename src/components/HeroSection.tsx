@@ -54,7 +54,7 @@ const HeroSection = () => (
   className="text-2xl md:text-3xl mb-6 leading-snug"
   style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400, color: '#1a1a1a' }}
 >
-  From complex Web3 products to{" "}
+  From complex tech products to{" "}
   <em style={{ color: '#2B5EA7', fontStyle: 'italic' }}>clear, compelling offers</em>
 </p>
           <p className="text-base max-w-lg mb-10 leading-relaxed" style={{ color: '#6b6357' }}>
