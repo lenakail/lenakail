@@ -98,7 +98,7 @@ const cases = [
     company: "10101.art",
     period: "2025 — Present",
     tag: "Tokenized Fine Art · Web3",
-    title: "GTM & Brand Strategy for a Tokenized Art Platform — From Zero to Pablo Picasso",
+    title: "GTM & Brand Strategy for a Tokenized Art Platform",
     challenge:
       "10101.art needed to build brand credibility and market presence at the intersection of fine art, Web3, and mainstream audiences — without a paid media budget.",
     what: [
