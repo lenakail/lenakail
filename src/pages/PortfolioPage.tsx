@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Youtube } from "lucide-react";
+import { ExternalLink, Youtube, Linkedin, Send, ChevronDown } from "lucide-react";
+import { useState } from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const cases = [
   {
@@ -282,75 +289,63 @@ const PortfolioPage = () => (
               </div>
             </div>
 
-            {/* What I did */}
-            <div className="mb-12">
-              <p
-                className="text-xs tracking-widest uppercase mb-5"
-                style={{ fontFamily: "Inter, sans-serif", color: "#7a7060" }}
-              >
-                What I did
-              </p>
-              {c.whatSections ? (
-                <div className="space-y-8 max-w-2xl">
-                  {c.whatSections.map((section, si) => (
-                    <div key={si}>
-                      <p
-                        className="text-xs font-medium mb-3"
-                        style={{ fontFamily: "Inter, sans-serif", color: "#2B5EA7", letterSpacing: "0.03em" }}
-                      >
-                        {section.title}
-                      </p>
-                      <ul className="space-y-3">
-                        {section.items.map((w, j) => (
+            {/* What I did — accordion */}
+            <div className="mb-12 max-w-2xl">
+              <Accordion type="single" collapsible>
+                <AccordionItem value="what" style={{ borderBottom: "0.5px solid #ddd8cf", borderTop: "0.5px solid #ddd8cf" }}>
+                  <AccordionTrigger className="hover:no-underline py-5" style={{ textDecoration: "none" }}>
+                    <span
+                      className="text-xs tracking-widest uppercase"
+                      style={{ fontFamily: "Inter, sans-serif", color: "#7a7060" }}
+                    >
+                      What I did
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-5">
+                    {c.whatSections ? (
+                      <div className="space-y-6">
+                        {c.whatSections.map((section, si) => (
+                          <div key={si}>
+                            <p
+                              className="text-xs font-medium mb-3"
+                              style={{ fontFamily: "Inter, sans-serif", color: "#2B5EA7", letterSpacing: "0.03em" }}
+                            >
+                              {section.title}
+                            </p>
+                            <ul className="space-y-2">
+                              {section.items.map((w, j) => (
+                                <li key={j} className="flex items-start gap-3">
+                                  <span
+                                    className="shrink-0"
+                                    style={{ marginTop: "8px", width: "4px", height: "4px", borderRadius: "50%", background: "#2B5EA7", display: "inline-block" }}
+                                  />
+                                  <span className="text-sm leading-relaxed" style={{ fontFamily: "Inter, sans-serif", color: "#4a4035" }}>
+                                    {w}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <ul className="space-y-2">
+                        {c.what.map((w, j) => (
                           <li key={j} className="flex items-start gap-3">
                             <span
                               className="shrink-0"
-                              style={{
-                                marginTop: "8px",
-                                width: "4px",
-                                height: "4px",
-                                borderRadius: "50%",
-                                background: "#2B5EA7",
-                                display: "inline-block",
-                              }}
+                              style={{ marginTop: "8px", width: "4px", height: "4px", borderRadius: "50%", background: "#2B5EA7", display: "inline-block" }}
                             />
-                            <span
-                              className="text-sm leading-relaxed"
-                              style={{ fontFamily: "Inter, sans-serif", color: "#4a4035" }}
-                            >
+                            <span className="text-sm leading-relaxed" style={{ fontFamily: "Inter, sans-serif", color: "#4a4035" }}>
                               {w}
                             </span>
                           </li>
                         ))}
                       </ul>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <ul className="space-y-3 max-w-2xl">
-                  {c.what.map((w, j) => (
-                    <li key={j} className="flex items-start gap-3">
-                      <span
-                        className="shrink-0"
-                        style={{
-                          marginTop: "8px",
-                          width: "4px",
-                          height: "4px",
-                          borderRadius: "50%",
-                          background: "#2B5EA7",
-                          display: "inline-block",
-                        }}
-                      />
-                      <span
-                        className="text-sm leading-relaxed"
-                        style={{ fontFamily: "Inter, sans-serif", color: "#4a4035" }}
-                      >
-                        {w}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              )}
+                    )}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </div>
 
             {/* Public proof links */}
@@ -429,6 +424,7 @@ const PortfolioPage = () => (
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-medium text-sm text-white transition-opacity hover:opacity-90"
               style={{ backgroundColor: "#2B5EA7", fontFamily: "Inter, sans-serif" }}
             >
+              <Linkedin size={16} />
               LinkedIn
             </a>
             <a
@@ -438,6 +434,7 @@ const PortfolioPage = () => (
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-medium text-sm text-white transition-opacity hover:opacity-90"
               style={{ backgroundColor: "#E8631A", fontFamily: "Inter, sans-serif" }}
             >
+              <Send size={16} />
               Telegram
             </a>
           </div>
