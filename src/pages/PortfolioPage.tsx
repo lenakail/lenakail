@@ -112,7 +112,7 @@ const cases = [
     results: [
       { value: "13.8M", label: "media reach — zero paid spend" },
       { value: "13", label: "organic media placements" },
-      { value: "+20%", label: "sales uplift from Picasso launch via BNB Chain audience activation" },
+      { value: "+20%", label: "sales uplift via BNB Chain audience activation" },
       { value: "500k+", label: "social reach from Art Talks Dubai" },
     ],
     links: [
