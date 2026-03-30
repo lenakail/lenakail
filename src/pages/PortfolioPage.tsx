@@ -96,7 +96,7 @@ const cases = [
     emoji: "palette",
     label: "Case Study 03",
     company: "10101.art",
-    period: "2025 — Present",
+    period: "2025 — 2026",
     tag: "Tokenized Fine Art · Web3",
     title: "GTM & Brand Strategy for a Tokenized Art Platform",
     challenge:
